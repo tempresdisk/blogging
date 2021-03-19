@@ -1,0 +1,15 @@
+{% load user_filters %}
+<div class="card my-4">
+    <form method="post" action="{% url 'add_comment' post.author.username post.id %}">
+        {% csrf_token %}
+        <h5 class="card-header">Добавить комментарий:</h5>
+        <div class="card-body">
+            <div class="form-group">
+                {% for field in form %}
+                {{ field|addclass:"form-control" }}
+                {% endfor %}
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} Пост автора {{ post.author.username }}{% endblock %}
+{% block header %}{# post.author.get_full_name #}{% endblock %}
+{% block content %}
+{% load thumbnail %}
+​
+<main role="main" class="container">
+    <div class="row">
+        {% include 'include/author_card.html' with author=author post_count=post_count following=following %}
+        <div class="col-md-9">
+            {% include "include/post_item.html" with post=post %}
+            {% include 'include/comments.html' %}
+        </div>
+    </div>
+</main>
+​
+{% endblock %}

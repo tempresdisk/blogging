@@ -1,0 +1,45 @@
+<!-- templates/about/author.html -->
+{% extends "base.html" %}
+{% block title %}О технологиях проекта{% endblock %}
+{% block content %}
+{% load user_filters %}
+<main role="main" class="container">
+    <div class="row">
+        <!-- Левый вспомогательный блок -->
+        <div class="col-md-3 mb-3 mt-1">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="h3">
+                                Автор
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="h6 text-muted">
+                                ###
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Тело страницы -->
+        <div class="col-md-9">
+            <div class="card-body">
+                <div class="card-text">
+                    <h1>Технологии</h1>
+                    <ul>
+                        <li> django 2.2.6 - фреймворк</li>
+                        <li>sqlite3 - БД</li>
+                        <li>bootstrap - стили и оформление</li>
+                        <li>Visual Studio Code - среда разработки</li>
+                        <li>git - система контроля версий</li>
+                        <li>Windows 10 - операционная система</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
